@@ -1,0 +1,24 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Print PDF</title>
+        <script>
+            window.onload = function() {
+                // Open the PDF in a new tab
+                const pdfWindow = window.open(r'file://e:\Python\Python projects\Anime Drawing Printing\out.pdf');
+                
+                // Wait for the PDF to load, then trigger print
+                setTimeout(function() {
+                    if (pdfWindow && !pdfWindow.closed) {
+                        pdfWindow.print();
+                    }
+                }, 2000); // 2 second delay to allow PDF to load
+            };
+        </script>
+    </head>
+    <body>
+        <p>Opening PDF and print dialog...</p>
+    </body>
+    </html>
+    
